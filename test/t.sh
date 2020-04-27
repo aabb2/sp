@@ -1,0 +1,1 @@
+gcc -lcunit demo.c && ./a.out
