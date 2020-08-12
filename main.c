@@ -5,9 +5,11 @@
 #include "./log/log.h"
 #include "sp.h"
 #include "fds/fds.h"
+#include <signal.h>
 
 
 int main() {
+	signal(SIGPIPE, SIG_IGN);
 	if(log_init("/var/sp/") == -1) {
 		perror("log init failed");
 		exit(23);
